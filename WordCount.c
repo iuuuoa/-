@@ -48,18 +48,18 @@ int main(int argc, char *argv[])
 {
 	char data;
 	FILE *fb=fopen(argv[2],"r");
-	if(!strcmp(argv[1],"-c"))//计算字符数 
-	{
-		CountC(argv[2]);
-	}
-	if(!strcmp(argv[1],"-w"))//计算单词数 
-	{
-		CountW(argv[2]);
-	}
 	if(!fb)
 	{
 		printf("读取文件失败！！\n");
 		return -1;
+	}
+	if(!strcmp(argv[1],"-c"))//计算字符数 
+	{
+		CountC(argv[2]);
+	}
+	else if(!strcmp(argv[1],"-w"))//计算单词数 
+	{
+		CountW(argv[2]);
 	}
 	else
 	{
